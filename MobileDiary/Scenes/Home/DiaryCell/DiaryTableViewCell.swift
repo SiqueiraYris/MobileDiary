@@ -19,8 +19,8 @@ final class DiaryTableViewCell: UITableViewCell {
 
     // MARK: - Functions
     func setup(with viewModel: DiaryCellViewModelProtocol) {
-        diaryTitle.text = viewModel.title
-        diaryText.text = viewModel.text
-        diaryDate.text = viewModel.date
+        diaryTitle.text = viewModel.getDiaryTitle()
+        diaryText.text = viewModel.getDiaryText()
+        diaryDate.text = viewModel.getDiaryDate()
     }
 }

@@ -10,21 +10,38 @@ import Foundation
 
 // MARK: - DiaryCellViewModelProtocol
 protocol DiaryCellViewModelProtocol {
-    var title: String? { get }
-    var text: String { get }
-    var date: String { get }
+    func getDiaryTitle() -> String
+    func getDiaryDate() -> String
+    func getDiaryText() -> String
 }
 
 final class DiaryCellViewModel: DiaryCellViewModelProtocol {
     // MARK: - Attributes
-    let title: String?
-    let text: String
-    let date: String
+    let diary: Diary
 
     // MARK: - Initializer
     init(with diary: Diary) {
-        title = diary.title
-        text = diary.text
-        date = diary.date
+        self.diary = diary
+    }
+
+    // MARK: - Functions
+    func getDiaryTitle() -> String {
+        if let diaryTitle = diary.title, !diaryTitle.isEmpty {
+            return diaryTitle
+        } else {
+            return String.localized(by: "Untitled")
+        }
+    }
+
+    func getDiaryDate() -> String {
+        diary.date
+    }
+
+    func getDiaryText() -> String {
+        if !diary.text.isEmpty {
+            return diary.text
+        } else {
+            return String.localized(by: "NoText")
+        }
     }
 }

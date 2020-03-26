@@ -9,6 +9,7 @@
 // MARK: - General
 "Diary" = "Diary";
 "Untitled" = "Untitled";
+"NoText" = "No text";
 "NewDiary" = "New Diary";
 "Title" = "Title";
 "Error" = "Error";

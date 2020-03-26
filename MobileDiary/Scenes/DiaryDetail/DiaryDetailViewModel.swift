@@ -41,6 +41,10 @@ final class DiaryDetailViewModel: DiaryDetailViewModelProtocol {
     }
 
     func getDiaryText() -> String {
-        diary.text
+        if !diary.text.isEmpty {
+            return diary.text
+        } else {
+            return String.localized(by: "NoText")
+        }
     }
 }
