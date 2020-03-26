@@ -43,6 +43,7 @@ final class NewEntryViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        setupBinds()
     }
 
     // MARK: - Functions
@@ -51,6 +52,16 @@ final class NewEntryViewController: UIViewController {
 
         let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didTapDoneEntry))
         navigationItem.rightBarButtonItem = done
+
+        hideKeyboard()
+    }
+
+    private func setupBinds() {
+        viewModel.error.bind { [weak self] error in
+            if let error = error {
+                self?.showAlert(title: String.localized(by: "Error"), message: error.localizedDescription)
+            }
+        }
     }
 
     // MARK: - Actions

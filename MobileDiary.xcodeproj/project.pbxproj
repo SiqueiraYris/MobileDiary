@@ -28,6 +28,7 @@
 		4DA3991E242D6403004838F8 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3991D242D6403004838F8 /* Dynamic.swift */; };
 		4DA39926242D66E9004838F8 /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39925242D66E9004838F8 /* DiaryTableViewCell.swift */; };
 		4DA39928242D6748004838F8 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39927242D6748004838F8 /* String+Localization.swift */; };
+		4DA3992A242D691D004838F8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39929242D691D004838F8 /* UIViewController+Extension.swift */; };
 		4DB9AA31242C19E100D08E1E /* BiometryAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA30242C19E100D08E1E /* BiometryAuthorization.swift */; };
 		4DB9AA35242C1FCE00D08E1E /* NewEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA34242C1FCE00D08E1E /* NewEntryViewModel.swift */; };
 		4DB9AA37242C1FD900D08E1E /* NewEntryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA36242C1FD900D08E1E /* NewEntryCoordinator.swift */; };
@@ -84,6 +85,7 @@
 		4DA3991D242D6403004838F8 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		4DA39925242D66E9004838F8 /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
 		4DA39927242D6748004838F8 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		4DA39929242D691D004838F8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4DB9AA30242C19E100D08E1E /* BiometryAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryAuthorization.swift; sourceTree = "<group>"; };
 		4DB9AA34242C1FCE00D08E1E /* NewEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewModel.swift; sourceTree = "<group>"; };
 		4DB9AA36242C1FD900D08E1E /* NewEntryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryCoordinator.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				4DA39913242D09C8004838F8 /* Date+Extension.swift */,
 				4DA39927242D6748004838F8 /* String+Localization.swift */,
+				4DA39929242D691D004838F8 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				4D3AD18E242BA714007E2D8A /* SceneDelegate.swift in Sources */,
 				4DA39911242CFE07004838F8 /* UserDefaultsKey.swift in Sources */,
 				4DA39926242D66E9004838F8 /* DiaryTableViewCell.swift in Sources */,
+				4DA3992A242D691D004838F8 /* UIViewController+Extension.swift in Sources */,
 				4DA39928242D6748004838F8 /* String+Localization.swift in Sources */,
 				4DA3990F242CFDC3004838F8 /* Diary.swift in Sources */,
 				4DB9AA41242C200200D08E1E /* DiaryDetailCoordinator.swift in Sources */,

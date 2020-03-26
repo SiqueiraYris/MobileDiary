@@ -10,12 +10,15 @@ import Foundation
 
 // MARK: - NewEntryViewModelProtocol
 protocol NewEntryViewModelProtocol {
+    var error: Dynamic<Error?> { get }
+
     func addEntry(text: String, title: String?)
 }
 
 final class NewEntryViewModel: NewEntryViewModelProtocol {
     // MARK: - Attributes
     private var coordinator: NewEntryCoordinator?
+    var error: Dynamic<Error?> = Dynamic(nil)
 
     // MARK: - Initializer
     init(coordinator: NewEntryCoordinator? = nil) {
@@ -26,8 +29,6 @@ final class NewEntryViewModel: NewEntryViewModelProtocol {
     func addEntry(text: String, title: String?) {
         let diary = Diary(title: title, date: Date().getCurrentDate(), text: text)
         saveDiary(diary: diary)
-
-        coordinator?.closeNewEntry()
     }
 
     private func saveDiary(diary: Diary) {
@@ -37,8 +38,10 @@ final class NewEntryViewModel: NewEntryViewModelProtocol {
                 let decoder = JSONDecoder()
                 diaries = try decoder.decode([Diary].self, from: data)
                 diaries.append(diary)
-            } catch {
-                print("Unable to Decode Note (\(error))")
+
+                coordinator?.closeNewEntry()
+            } catch (let error) {
+                self.error.value = error
             }
         }
 
@@ -47,8 +50,8 @@ final class NewEntryViewModel: NewEntryViewModelProtocol {
             let data = try encoder.encode(diaries)
 
             UserDefaults.standard.set(data, forKey: UserDefaultsKey.diaries.rawValue)
-        } catch {
-            print("Unable to Encode Note (\(error))")
+        } catch (let error) {
+            self.error.value = error
         }
     }
 }

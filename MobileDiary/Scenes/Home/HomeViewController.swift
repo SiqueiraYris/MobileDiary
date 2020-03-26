@@ -63,10 +63,16 @@ final class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = add
         navigationItem.rightBarButtonItem?.isEnabled = false
     }
-    
+
     private func setupBinds() {
         viewModel.diaries.bind { [weak self] _ in
             self?.entriesTableView.reloadData()
+        }
+
+        viewModel.error.bind { [weak self] error in
+            if let error = error {
+                self?.showAlert(title: String.localized(by: "Error"), message: error.localizedDescription)
+            }
         }
     }
 

@@ -11,6 +11,7 @@ import Foundation
 // MARK: - HomeViewModelProtocol
 protocol HomeViewModelProtocol {
     var diaries: Dynamic<[Diary]> { get }
+    var error: Dynamic<Error?> { get }
 
     func fetchDiaries()
     func setBiometry(completion: @escaping(Bool?) -> Void)
@@ -23,6 +24,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Attributes
     private var coordinator: HomeCoordinator?
     var diaries: Dynamic<[Diary]> = Dynamic([])
+    var error: Dynamic<Error?> = Dynamic(nil)
 
     // MARK: - Initializer
     init(coordinator: HomeCoordinator? = nil) {
@@ -43,7 +45,9 @@ final class HomeViewModel: HomeViewModelProtocol {
                 let decoder = JSONDecoder()
                 self.diaries.value = try decoder.decode([Diary].self, from: data).reversed()
             } catch {
-                print("Unable to Decode Note (\(error))")
+                DispatchQueue.main.async {
+                    self.error.value = error
+                }
             }
         }
     }
