@@ -37,7 +37,7 @@ final class DiaryDetailViewController: UIViewController {
     }
 
     private func setupUI() {
-        title = "Diary"
+        title = String.localized(by: "Diary")
     }
 
     private func setupBinds() {

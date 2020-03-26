@@ -32,7 +32,7 @@ final class DiaryDetailViewModel: DiaryDetailViewModelProtocol {
         if let diaryTitle = diary.title, !diaryTitle.isEmpty {
             return diaryTitle
         } else {
-            return "Sem titulo"
+            return String.localized(by: "Untitled")
         }
     }
 

@@ -5,3 +5,10 @@
   Created by Siqueira on 25/03/20.
   Copyright © 2020 Siqueira. All rights reserved.
 */
+
+// MARK: - General
+"Diary" = "Diary";
+"Untitled" = "Untitled";
+"NewDiary" = "New Diary";
+"Title" = "Title";
+"Login" = "Login to see/create your entries in diary";

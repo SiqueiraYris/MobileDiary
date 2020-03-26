@@ -12,7 +12,7 @@ final class NewEntryViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var titleTextField: UITextField! {
         didSet {
-            titleTextField.placeholder = "Title"
+            titleTextField.placeholder = String.localized(by: "Title")
         }
     }
     @IBOutlet private weak var textTextView: UITextView! {
@@ -47,7 +47,7 @@ final class NewEntryViewController: UIViewController {
 
     // MARK: - Functions
     private func setupUI() {
-        title = "New Diary"
+        title = String.localized(by: "NewDiary")
 
         let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didTapDoneEntry))
         navigationItem.rightBarButtonItem = done

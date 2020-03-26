@@ -57,7 +57,7 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Functions
     private func setupUI() {
-        title = "Diary"
+        title = String.localized(by: "Diary")
 
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddEntry))
         navigationItem.rightBarButtonItem = add
@@ -109,7 +109,8 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.identifier, for: indexPath) as? DiaryTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.identifier,
+                                                    for: indexPath) as? DiaryTableViewCell {
             let cellViewModel = DiaryCellViewModel(with: viewModel.diaries.value[indexPath.row])
             cell.selectionStyle = .none
             cell.setup(with: cellViewModel)
