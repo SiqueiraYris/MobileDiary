@@ -9,7 +9,10 @@
 import Foundation
 
 // MARK: - HomeViewModelProtocol
-protocol HomeViewModelProtocol {}
+protocol HomeViewModelProtocol {
+    func setBiometry(completion: @escaping(Bool?) -> Void)
+    func tapAddEntry()
+}
 
 final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Attributes
@@ -18,5 +21,17 @@ final class HomeViewModel: HomeViewModelProtocol {
     // MARK: - Initializer
     init(coordinator: HomeCoordinator? = nil) {
         self.coordinator = coordinator
+    }
+
+    // MARK: - Functions
+    func setBiometry(completion: @escaping(Bool?) -> Void) {
+        let biometry = BiometryAuthorization()
+        biometry.authenticateUserUsingTouchId { status in
+            completion(status)
+        }
+    }
+
+    func tapAddEntry() {
+        coordinator?.tapAddEntry()
     }
 }

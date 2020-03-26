@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  NewEntryCoordinator.swift
 //  MobileDiary
 //
 //  Created by Siqueira on 25/03/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeCoordinator: Coordinator {
+final class NewEntryCoordinator: Coordinator {
     // MARK: - Attributes
     var navigationController: UINavigationController?
 
@@ -19,15 +19,14 @@ final class HomeCoordinator: Coordinator {
 
     // MARK: - Life Cycle
     func start() {
-        let viewModel = HomeViewModel(coordinator: self)
-        let viewController = HomeViewController(viewModel: viewModel)
+        let viewModel = NewEntryViewModel(coordinator: self)
+        let viewController = NewEntryViewController(viewModel: viewModel)
 
         navigationController?.pushViewController(viewController, animated: true)
     }
 
     // MARK: - Navigations
-    func tapAddEntry() {
-        let newEntryCoordinator = NewEntryCoordinator(presenter: navigationController)
-        newEntryCoordinator.start()
+    func closeNewEntry() {
+        navigationController?.popViewController(animated: true)
     }
 }
