@@ -20,15 +20,22 @@
 		4D3AD1CA242BA95B007E2D8A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AD1C8242BA95B007E2D8A /* HomeViewController.swift */; };
 		4D3AD1CB242BA95B007E2D8A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AD1C9242BA95B007E2D8A /* HomeViewController.xib */; };
 		4D3AD1CD242BAA70007E2D8A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AD1CC242BAA70007E2D8A /* HomeViewModel.swift */; };
+		4DA3990F242CFDC3004838F8 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3990E242CFDC3004838F8 /* Diary.swift */; };
+		4DA39911242CFE07004838F8 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39910242CFE07004838F8 /* UserDefaultsKey.swift */; };
+		4DA39914242D09C8004838F8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39913242D09C8004838F8 /* Date+Extension.swift */; };
+		4DA3991B242D577C004838F8 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39919242D577C004838F8 /* DiaryDetailViewController.swift */; };
+		4DA3991C242D577C004838F8 /* DiaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA3991A242D577C004838F8 /* DiaryDetailViewController.xib */; };
+		4DA3991E242D6403004838F8 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3991D242D6403004838F8 /* Dynamic.swift */; };
 		4DB9AA31242C19E100D08E1E /* BiometryAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA30242C19E100D08E1E /* BiometryAuthorization.swift */; };
 		4DB9AA35242C1FCE00D08E1E /* NewEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA34242C1FCE00D08E1E /* NewEntryViewModel.swift */; };
 		4DB9AA37242C1FD900D08E1E /* NewEntryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA36242C1FD900D08E1E /* NewEntryCoordinator.swift */; };
 		4DB9AA3A242C1FE200D08E1E /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA38242C1FE200D08E1E /* NewEntryViewController.swift */; };
 		4DB9AA3B242C1FE200D08E1E /* NewEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9AA39242C1FE200D08E1E /* NewEntryViewController.xib */; };
-		4DB9AA3E242C1FF900D08E1E /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA3C242C1FF900D08E1E /* EntryDetailViewController.swift */; };
-		4DB9AA3F242C1FF900D08E1E /* EntryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9AA3D242C1FF900D08E1E /* EntryDetailViewController.xib */; };
-		4DB9AA41242C200200D08E1E /* EntryDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA40242C200200D08E1E /* EntryDetailCoordinator.swift */; };
-		4DB9AA43242C200900D08E1E /* EntryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA42242C200900D08E1E /* EntryDetailViewModel.swift */; };
+		4DB9AA41242C200200D08E1E /* DiaryDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA40242C200200D08E1E /* DiaryDetailCoordinator.swift */; };
+		4DB9AA43242C200900D08E1E /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA42242C200900D08E1E /* DiaryDetailViewModel.swift */; };
+		4DB9AA47242C30D100D08E1E /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA45242C30D100D08E1E /* EntryTableViewCell.swift */; };
+		4DB9AA48242C30D100D08E1E /* EntryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9AA46242C30D100D08E1E /* EntryTableViewCell.xib */; };
+		4DB9AA4A242C314500D08E1E /* EntryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA49242C314500D08E1E /* EntryCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,15 +75,22 @@
 		4D3AD1C8242BA95B007E2D8A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4D3AD1C9242BA95B007E2D8A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		4D3AD1CC242BAA70007E2D8A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4DA3990E242CFDC3004838F8 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		4DA39910242CFE07004838F8 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		4DA39913242D09C8004838F8 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		4DA39919242D577C004838F8 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
+		4DA3991A242D577C004838F8 /* DiaryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryDetailViewController.xib; sourceTree = "<group>"; };
+		4DA3991D242D6403004838F8 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		4DB9AA30242C19E100D08E1E /* BiometryAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryAuthorization.swift; sourceTree = "<group>"; };
 		4DB9AA34242C1FCE00D08E1E /* NewEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewModel.swift; sourceTree = "<group>"; };
 		4DB9AA36242C1FD900D08E1E /* NewEntryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryCoordinator.swift; sourceTree = "<group>"; };
 		4DB9AA38242C1FE200D08E1E /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 		4DB9AA39242C1FE200D08E1E /* NewEntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEntryViewController.xib; sourceTree = "<group>"; };
-		4DB9AA3C242C1FF900D08E1E /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
-		4DB9AA3D242C1FF900D08E1E /* EntryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryDetailViewController.xib; sourceTree = "<group>"; };
-		4DB9AA40242C200200D08E1E /* EntryDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailCoordinator.swift; sourceTree = "<group>"; };
-		4DB9AA42242C200900D08E1E /* EntryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewModel.swift; sourceTree = "<group>"; };
+		4DB9AA40242C200200D08E1E /* DiaryDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailCoordinator.swift; sourceTree = "<group>"; };
+		4DB9AA42242C200900D08E1E /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
+		4DB9AA45242C30D100D08E1E /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		4DB9AA46242C30D100D08E1E /* EntryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryTableViewCell.xib; sourceTree = "<group>"; };
+		4DB9AA49242C314500D08E1E /* EntryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +141,8 @@
 		4D3AD18A242BA714007E2D8A /* MobileDiary */ = {
 			isa = PBXGroup;
 			children = (
+				4DA39912242D09B5004838F8 /* Extensions */,
+				4DA3990D242CFDB4004838F8 /* Models */,
 				4D3AD1BB242BA7AB007E2D8A /* Application */,
 				4D3AD196242BA718007E2D8A /* LaunchScreen.storyboard */,
 				4D3AD1BC242BA7B1007E2D8A /* Resources */,
@@ -178,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				4D3AD1C0242BA887007E2D8A /* Application */,
-				4DB9AA33242C1FBA00D08E1E /* EntryDetail */,
+				4DB9AA33242C1FBA00D08E1E /* DiaryDetail */,
 				4D3AD1C5242BA942007E2D8A /* Home */,
 				4DB9AA32242C1F9E00D08E1E /* NewEntry */,
 			);
@@ -196,7 +212,7 @@
 		4D3AD1C5242BA942007E2D8A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4DB9AA44242C2CFE00D08E1E /* EntryCell */,
+				4DB9AA44242C2CFE00D08E1E /* DiaryCell */,
 				4D3AD1C6242BA94F007E2D8A /* HomeCoordinator.swift */,
 				4D3AD1C8242BA95B007E2D8A /* HomeViewController.swift */,
 				4D3AD1C9242BA95B007E2D8A /* HomeViewController.xib */,
@@ -205,10 +221,28 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		4DA3990D242CFDB4004838F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DA3990E242CFDC3004838F8 /* Diary.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DA39912242D09B5004838F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DA39913242D09C8004838F8 /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4DB9AA2F242C19D100D08E1E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				4DB9AA30242C19E100D08E1E /* BiometryAuthorization.swift */,
+				4DA3991D242D6403004838F8 /* Dynamic.swift */,
+				4DA39910242CFE07004838F8 /* UserDefaultsKey.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,22 +258,25 @@
 			path = NewEntry;
 			sourceTree = "<group>";
 		};
-		4DB9AA33242C1FBA00D08E1E /* EntryDetail */ = {
+		4DB9AA33242C1FBA00D08E1E /* DiaryDetail */ = {
 			isa = PBXGroup;
 			children = (
-				4DB9AA3C242C1FF900D08E1E /* EntryDetailViewController.swift */,
-				4DB9AA3D242C1FF900D08E1E /* EntryDetailViewController.xib */,
-				4DB9AA40242C200200D08E1E /* EntryDetailCoordinator.swift */,
-				4DB9AA42242C200900D08E1E /* EntryDetailViewModel.swift */,
+				4DB9AA40242C200200D08E1E /* DiaryDetailCoordinator.swift */,
+				4DA39919242D577C004838F8 /* DiaryDetailViewController.swift */,
+				4DA3991A242D577C004838F8 /* DiaryDetailViewController.xib */,
+				4DB9AA42242C200900D08E1E /* DiaryDetailViewModel.swift */,
 			);
-			path = EntryDetail;
+			path = DiaryDetail;
 			sourceTree = "<group>";
 		};
-		4DB9AA44242C2CFE00D08E1E /* EntryCell */ = {
+		4DB9AA44242C2CFE00D08E1E /* DiaryCell */ = {
 			isa = PBXGroup;
 			children = (
+				4DB9AA49242C314500D08E1E /* EntryCellViewModel.swift */,
+				4DB9AA45242C30D100D08E1E /* EntryTableViewCell.swift */,
+				4DB9AA46242C30D100D08E1E /* EntryTableViewCell.xib */,
 			);
-			path = EntryCell;
+			path = DiaryCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,10 +385,11 @@
 			files = (
 				4D3AD198242BA718007E2D8A /* LaunchScreen.storyboard in Resources */,
 				4DB9AA3B242C1FE200D08E1E /* NewEntryViewController.xib in Resources */,
-				4DB9AA3F242C1FF900D08E1E /* EntryDetailViewController.xib in Resources */,
+				4DA3991C242D577C004838F8 /* DiaryDetailViewController.xib in Resources */,
 				4D3AD1BE242BA7CF007E2D8A /* Localizable.strings in Resources */,
 				4D3AD1CB242BA95B007E2D8A /* HomeViewController.xib in Resources */,
 				4D3AD195242BA718007E2D8A /* Assets.xcassets in Resources */,
+				4DB9AA48242C30D100D08E1E /* EntryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,18 +415,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB9AA31242C19E100D08E1E /* BiometryAuthorization.swift in Sources */,
+				4DA3991E242D6403004838F8 /* Dynamic.swift in Sources */,
+				4DB9AA4A242C314500D08E1E /* EntryCellViewModel.swift in Sources */,
 				4D3AD1C4242BA8C7007E2D8A /* ApplicationCoordinator.swift in Sources */,
-				4DB9AA43242C200900D08E1E /* EntryDetailViewModel.swift in Sources */,
+				4DB9AA43242C200900D08E1E /* DiaryDetailViewModel.swift in Sources */,
 				4DB9AA37242C1FD900D08E1E /* NewEntryCoordinator.swift in Sources */,
 				4D3AD1C2242BA8A6007E2D8A /* Coordinator.swift in Sources */,
 				4DB9AA3A242C1FE200D08E1E /* NewEntryViewController.swift in Sources */,
+				4DB9AA47242C30D100D08E1E /* EntryTableViewCell.swift in Sources */,
 				4D3AD18C242BA714007E2D8A /* AppDelegate.swift in Sources */,
 				4D3AD18E242BA714007E2D8A /* SceneDelegate.swift in Sources */,
-				4DB9AA41242C200200D08E1E /* EntryDetailCoordinator.swift in Sources */,
+				4DA39911242CFE07004838F8 /* UserDefaultsKey.swift in Sources */,
+				4DA3990F242CFDC3004838F8 /* Diary.swift in Sources */,
+				4DB9AA41242C200200D08E1E /* DiaryDetailCoordinator.swift in Sources */,
 				4D3AD1CA242BA95B007E2D8A /* HomeViewController.swift in Sources */,
+				4DA3991B242D577C004838F8 /* DiaryDetailViewController.swift in Sources */,
 				4DB9AA35242C1FCE00D08E1E /* NewEntryViewModel.swift in Sources */,
 				4D3AD1CD242BAA70007E2D8A /* HomeViewModel.swift in Sources */,
-				4DB9AA3E242C1FF900D08E1E /* EntryDetailViewController.swift in Sources */,
+				4DA39914242D09C8004838F8 /* Date+Extension.swift in Sources */,
 				4D3AD1C7242BA94F007E2D8A /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

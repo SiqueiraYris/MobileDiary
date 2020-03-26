@@ -10,11 +10,11 @@ import UIKit
 
 final class HomeCoordinator: Coordinator {
     // MARK: - Attributes
-    var navigationController: UINavigationController?
+    private var presenter: UINavigationController?
 
     // MARK: - Initializer
     init(presenter: UINavigationController?) {
-        navigationController = presenter
+        self.presenter = presenter
     }
 
     // MARK: - Life Cycle
@@ -22,12 +22,17 @@ final class HomeCoordinator: Coordinator {
         let viewModel = HomeViewModel(coordinator: self)
         let viewController = HomeViewController(viewModel: viewModel)
 
-        navigationController?.pushViewController(viewController, animated: true)
+        presenter?.pushViewController(viewController, animated: true)
     }
 
     // MARK: - Navigations
     func tapAddEntry() {
-        let newEntryCoordinator = NewEntryCoordinator(presenter: navigationController)
+        let newEntryCoordinator = NewEntryCoordinator(presenter: presenter)
         newEntryCoordinator.start()
+    }
+
+    func showDiaryDetail(diary: Diary) {
+        let diaryDetailCoordinator = DiaryDetailCoordinator(presenter: presenter, diary: diary)
+        diaryDetailCoordinator.start()
     }
 }

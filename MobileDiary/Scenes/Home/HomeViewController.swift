@@ -10,11 +10,13 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     // MARK: - IBOutlets
+    @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var entriesTableView: UITableView! {
         didSet {
-            entriesTableView.isHidden = true
+            setupTableView()
         }
     }
+
     // MARK: - Attributes
     private var viewModel: HomeViewModelProtocol
 
@@ -36,6 +38,13 @@ final class HomeViewController: UIViewController {
 
         setBiometry()
         setupUI()
+        setupBinds()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.fetchDiaries()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,9 +57,17 @@ final class HomeViewController: UIViewController {
 
     // MARK: - Functions
     private func setupUI() {
+        title = "Diary"
+
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddEntry))
         navigationItem.rightBarButtonItem = add
         navigationItem.rightBarButtonItem?.isEnabled = false
+    }
+    
+    private func setupBinds() {
+        viewModel.diaries.bind { [weak self] _ in
+            self?.entriesTableView.reloadData()
+        }
     }
 
     private func setBiometry() {
@@ -59,14 +76,62 @@ final class HomeViewController: UIViewController {
             if status {
                 DispatchQueue.main.async {
                     self.entriesTableView.isHidden = false
+                    self.loginButton.isHidden = true
                     self.navigationItem.rightBarButtonItem?.isEnabled = true
                 }
             }
         }
     }
 
+    private func setupTableView() {
+        entriesTableView.dataSource = self
+        entriesTableView.delegate = self
+
+        entriesTableView.isHidden = true
+
+        entriesTableView.register(UINib(nibName: EntryTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: EntryTableViewCell.identifier)
+    }
+
     // MARK: - Actions
     @objc private func didTapAddEntry() {
         viewModel.tapAddEntry()
+    }
+
+    @IBAction private func didTapLoginButton(_ sender: UIButton) {
+        setBiometry()
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numberOfRows()
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: EntryTableViewCell.identifier, for: indexPath) as? EntryTableViewCell {
+            let cellViewModel = EntryCellViewModel(with: viewModel.diaries.value[indexPath.row])
+            cell.selectionStyle = .none
+            cell.setup(with: cellViewModel)
+
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        112
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectItemAt(indexPath: indexPath)
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        UIView()
     }
 }

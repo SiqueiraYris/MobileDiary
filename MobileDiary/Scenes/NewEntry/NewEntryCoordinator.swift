@@ -10,11 +10,11 @@ import UIKit
 
 final class NewEntryCoordinator: Coordinator {
     // MARK: - Attributes
-    var navigationController: UINavigationController?
+    var presenter: UINavigationController?
 
     // MARK: - Initializer
     init(presenter: UINavigationController?) {
-        navigationController = presenter
+        self.presenter = presenter
     }
 
     // MARK: - Life Cycle
@@ -22,11 +22,11 @@ final class NewEntryCoordinator: Coordinator {
         let viewModel = NewEntryViewModel(coordinator: self)
         let viewController = NewEntryViewController(viewModel: viewModel)
 
-        navigationController?.pushViewController(viewController, animated: true)
+        presenter?.pushViewController(viewController, animated: true)
     }
 
     // MARK: - Navigations
     func closeNewEntry() {
-        navigationController?.popViewController(animated: true)
+        presenter?.popViewController(animated: true)
     }
 }

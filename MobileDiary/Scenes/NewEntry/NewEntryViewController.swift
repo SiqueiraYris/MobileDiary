@@ -47,6 +47,8 @@ final class NewEntryViewController: UIViewController {
 
     // MARK: - Functions
     private func setupUI() {
+        title = "New Diary"
+
         let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didTapDoneEntry))
         navigationItem.rightBarButtonItem = done
     }
