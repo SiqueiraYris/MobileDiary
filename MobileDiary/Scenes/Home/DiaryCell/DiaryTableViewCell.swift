@@ -1,5 +1,5 @@
 //
-//  EntryTableViewCell.swift
+//  DiaryTableViewCell.swift
 //  MobileDiary
 //
 //  Created by Siqueira on 25/03/20.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-final class EntryTableViewCell: UITableViewCell {
+final class DiaryTableViewCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet private weak var diaryTitle: UILabel!
     @IBOutlet private weak var diaryText: UILabel!
     @IBOutlet private weak var diaryDate: UILabel!
     
     // MARK: - Attributes
-    static let identifier = "EntryTableViewCell"
+    static let identifier = "DiaryTableViewCell"
 
     // MARK: - Functions
-    func setup(with viewModel: EntryCellViewModelProtocol) {
+    func setup(with viewModel: DiaryCellViewModelProtocol) {
         diaryTitle.text = viewModel.title
         diaryText.text = viewModel.text
         diaryDate.text = viewModel.date

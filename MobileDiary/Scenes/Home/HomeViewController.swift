@@ -89,7 +89,7 @@ final class HomeViewController: UIViewController {
 
         entriesTableView.isHidden = true
 
-        entriesTableView.register(UINib(nibName: EntryTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: EntryTableViewCell.identifier)
+        entriesTableView.register(UINib(nibName: DiaryTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: DiaryTableViewCell.identifier)
     }
 
     // MARK: - Actions
@@ -109,8 +109,8 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: EntryTableViewCell.identifier, for: indexPath) as? EntryTableViewCell {
-            let cellViewModel = EntryCellViewModel(with: viewModel.diaries.value[indexPath.row])
+        if let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.identifier, for: indexPath) as? DiaryTableViewCell {
+            let cellViewModel = DiaryCellViewModel(with: viewModel.diaries.value[indexPath.row])
             cell.selectionStyle = .none
             cell.setup(with: cellViewModel)
 

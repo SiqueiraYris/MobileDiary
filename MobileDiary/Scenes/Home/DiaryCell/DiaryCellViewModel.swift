@@ -1,5 +1,5 @@
 //
-//  EntryCellViewModel.swift
+//  DiaryCellViewModel.swift
 //  MobileDiary
 //
 //  Created by Siqueira on 25/03/20.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-// MARK: - EntryCellViewModelProtocol
-protocol EntryCellViewModelProtocol {
+// MARK: - DiaryCellViewModelProtocol
+protocol DiaryCellViewModelProtocol {
     var title: String? { get }
     var text: String { get }
     var date: String { get }
 }
 
-final class EntryCellViewModel: EntryCellViewModelProtocol {
+final class DiaryCellViewModel: DiaryCellViewModelProtocol {
     // MARK: - Attributes
     let title: String?
     let text: String

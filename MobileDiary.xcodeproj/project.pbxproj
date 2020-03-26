@@ -26,6 +26,7 @@
 		4DA3991B242D577C004838F8 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39919242D577C004838F8 /* DiaryDetailViewController.swift */; };
 		4DA3991C242D577C004838F8 /* DiaryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA3991A242D577C004838F8 /* DiaryDetailViewController.xib */; };
 		4DA3991E242D6403004838F8 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3991D242D6403004838F8 /* Dynamic.swift */; };
+		4DA39926242D66E9004838F8 /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39925242D66E9004838F8 /* DiaryTableViewCell.swift */; };
 		4DB9AA31242C19E100D08E1E /* BiometryAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA30242C19E100D08E1E /* BiometryAuthorization.swift */; };
 		4DB9AA35242C1FCE00D08E1E /* NewEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA34242C1FCE00D08E1E /* NewEntryViewModel.swift */; };
 		4DB9AA37242C1FD900D08E1E /* NewEntryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA36242C1FD900D08E1E /* NewEntryCoordinator.swift */; };
@@ -33,9 +34,8 @@
 		4DB9AA3B242C1FE200D08E1E /* NewEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9AA39242C1FE200D08E1E /* NewEntryViewController.xib */; };
 		4DB9AA41242C200200D08E1E /* DiaryDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA40242C200200D08E1E /* DiaryDetailCoordinator.swift */; };
 		4DB9AA43242C200900D08E1E /* DiaryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA42242C200900D08E1E /* DiaryDetailViewModel.swift */; };
-		4DB9AA47242C30D100D08E1E /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA45242C30D100D08E1E /* EntryTableViewCell.swift */; };
-		4DB9AA48242C30D100D08E1E /* EntryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9AA46242C30D100D08E1E /* EntryTableViewCell.xib */; };
-		4DB9AA4A242C314500D08E1E /* EntryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA49242C314500D08E1E /* EntryCellViewModel.swift */; };
+		4DB9AA48242C30D100D08E1E /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9AA46242C30D100D08E1E /* DiaryTableViewCell.xib */; };
+		4DB9AA4A242C314500D08E1E /* DiaryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9AA49242C314500D08E1E /* DiaryCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +81,7 @@
 		4DA39919242D577C004838F8 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		4DA3991A242D577C004838F8 /* DiaryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryDetailViewController.xib; sourceTree = "<group>"; };
 		4DA3991D242D6403004838F8 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		4DA39925242D66E9004838F8 /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
 		4DB9AA30242C19E100D08E1E /* BiometryAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryAuthorization.swift; sourceTree = "<group>"; };
 		4DB9AA34242C1FCE00D08E1E /* NewEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewModel.swift; sourceTree = "<group>"; };
 		4DB9AA36242C1FD900D08E1E /* NewEntryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryCoordinator.swift; sourceTree = "<group>"; };
@@ -88,9 +89,8 @@
 		4DB9AA39242C1FE200D08E1E /* NewEntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEntryViewController.xib; sourceTree = "<group>"; };
 		4DB9AA40242C200200D08E1E /* DiaryDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailCoordinator.swift; sourceTree = "<group>"; };
 		4DB9AA42242C200900D08E1E /* DiaryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewModel.swift; sourceTree = "<group>"; };
-		4DB9AA45242C30D100D08E1E /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
-		4DB9AA46242C30D100D08E1E /* EntryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryTableViewCell.xib; sourceTree = "<group>"; };
-		4DB9AA49242C314500D08E1E /* EntryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCellViewModel.swift; sourceTree = "<group>"; };
+		4DB9AA46242C30D100D08E1E /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
+		4DB9AA49242C314500D08E1E /* DiaryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,9 +272,9 @@
 		4DB9AA44242C2CFE00D08E1E /* DiaryCell */ = {
 			isa = PBXGroup;
 			children = (
-				4DB9AA49242C314500D08E1E /* EntryCellViewModel.swift */,
-				4DB9AA45242C30D100D08E1E /* EntryTableViewCell.swift */,
-				4DB9AA46242C30D100D08E1E /* EntryTableViewCell.xib */,
+				4DB9AA49242C314500D08E1E /* DiaryCellViewModel.swift */,
+				4DA39925242D66E9004838F8 /* DiaryTableViewCell.swift */,
+				4DB9AA46242C30D100D08E1E /* DiaryTableViewCell.xib */,
 			);
 			path = DiaryCell;
 			sourceTree = "<group>";
@@ -389,7 +389,7 @@
 				4D3AD1BE242BA7CF007E2D8A /* Localizable.strings in Resources */,
 				4D3AD1CB242BA95B007E2D8A /* HomeViewController.xib in Resources */,
 				4D3AD195242BA718007E2D8A /* Assets.xcassets in Resources */,
-				4DB9AA48242C30D100D08E1E /* EntryTableViewCell.xib in Resources */,
+				4DB9AA48242C30D100D08E1E /* DiaryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,16 +416,16 @@
 			files = (
 				4DB9AA31242C19E100D08E1E /* BiometryAuthorization.swift in Sources */,
 				4DA3991E242D6403004838F8 /* Dynamic.swift in Sources */,
-				4DB9AA4A242C314500D08E1E /* EntryCellViewModel.swift in Sources */,
+				4DB9AA4A242C314500D08E1E /* DiaryCellViewModel.swift in Sources */,
 				4D3AD1C4242BA8C7007E2D8A /* ApplicationCoordinator.swift in Sources */,
 				4DB9AA43242C200900D08E1E /* DiaryDetailViewModel.swift in Sources */,
 				4DB9AA37242C1FD900D08E1E /* NewEntryCoordinator.swift in Sources */,
 				4D3AD1C2242BA8A6007E2D8A /* Coordinator.swift in Sources */,
 				4DB9AA3A242C1FE200D08E1E /* NewEntryViewController.swift in Sources */,
-				4DB9AA47242C30D100D08E1E /* EntryTableViewCell.swift in Sources */,
 				4D3AD18C242BA714007E2D8A /* AppDelegate.swift in Sources */,
 				4D3AD18E242BA714007E2D8A /* SceneDelegate.swift in Sources */,
 				4DA39911242CFE07004838F8 /* UserDefaultsKey.swift in Sources */,
+				4DA39926242D66E9004838F8 /* DiaryTableViewCell.swift in Sources */,
 				4DA3990F242CFDC3004838F8 /* Diary.swift in Sources */,
 				4DB9AA41242C200200D08E1E /* DiaryDetailCoordinator.swift in Sources */,
 				4D3AD1CA242BA95B007E2D8A /* HomeViewController.swift in Sources */,
