@@ -13,4 +13,5 @@
 "NewDiary" = "New Diary";
 "Title" = "Title";
 "Error" = "Error";
-"Login" = "Login to see/create your entries in diary";
+"LoginMessage" = "Login to see/create your entries in diary";
+"Login" = "Login with Face/Touch ID";

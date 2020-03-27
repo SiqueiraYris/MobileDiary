@@ -10,7 +10,11 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var loginButton: UIButton! {
+        didSet {
+            loginButton.setTitle(String.localized(by: "Login"), for: .normal)
+        }
+    }
     @IBOutlet private weak var entriesTableView: UITableView! {
         didSet {
             setupTableView()
